@@ -1,0 +1,24 @@
+﻿<Window
+    x:Class="XAMLIslandTransparency.CanvasWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:XAMLIslandTransparency"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:xaml="clr-namespace:Microsoft.Toolkit.Wpf.UI.XamlHost;assembly=Microsoft.Toolkit.Wpf.UI.XamlHost"
+    Title="CanvasWindow"
+    Width="800"
+    Height="450"
+    Background="Transparent"
+    ResizeMode="CanMinimize"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" />
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Border BorderBrush="Red" BorderThickness="5">
+            <xaml:WindowsXamlHost x:Name="xamlHost" InitialTypeName="XAMLIslandUWP.MainPage" />
+        </Border>
+    </Grid>
+</Window>
